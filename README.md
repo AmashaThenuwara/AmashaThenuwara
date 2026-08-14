@@ -4,11 +4,11 @@
   <br/><br/>
   
   <h3 align="center">📫 Let's Connect</h3>
-  <a href="https://www.linkedin.com/in/amasha-thenuwara-487765407"><img src="https://img.shields.io/badge/LinkedIn-%239400d3.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://www.linkedin.com/in/amasha-thenuwara-487765407"><img src="https://img.shields.io/badge/LinkedIn-%2314223d.svg?style=for-the-badge&logo=linkedin&logoColor=22ddff" alt="LinkedIn" /></a>
   
   <br/><br/>
   
-  <h3 align="center">🟣 Languages and Tools</h3>
+  <h3 align="center">🔹 Languages and Tools</h3>
   <p align="center">
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="java" width="45" height="45" title="Java"/>
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="kotlin" width="45" height="45" title="Kotlin"/>
@@ -20,7 +20,7 @@
   
   <br/><br/>
 
-  <h3 align="center">👾 Featured Projects</h3>
+  <h3 align="center">🌐 Featured Projects</h3>
   <a href="https://github.com/AmashaThenuwara/texyshield"><img src="https://raw.githubusercontent.com/AmashaThenuwara/AmashaThenuwara/main/btn_texyshield.svg" /></a> &nbsp;&nbsp;&nbsp;
   <a href="https://github.com/AmashaThenuwara/AgriScout_androidapp"><img src="https://raw.githubusercontent.com/AmashaThenuwara/AmashaThenuwara/main/btn_agriscout.svg" /></a>
   <br/><br/>
@@ -31,5 +31,5 @@
   <a href="https://github.com/AmashaThenuwara/DM2-project"><img src="https://raw.githubusercontent.com/AmashaThenuwara/AmashaThenuwara/main/btn_dm2.svg" /></a>
 
   <br/><br/>
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=9400d3&height=100&section=footer" width="100%" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=14223d&height=100&section=footer" width="100%" />
 </div>
