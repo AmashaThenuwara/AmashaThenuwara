@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./galaxy_profile.svg" width="100%" alt="Animated Galaxy Profile" />
+  <img src="https://raw.githubusercontent.com/AmashaThenuwara/AmashaThenuwara/main/galaxy_profile.svg" width="100%" alt="Animated Galaxy Profile" />
   
   <br/><br/>
   
@@ -21,14 +21,14 @@
   <br/><br/>
 
   <h3 align="center">👾 Featured Projects</h3>
-  <a href="https://github.com/AmashaThenuwara/texyshield"><img src="./btn_texyshield.svg" /></a> &nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/AmashaThenuwara/AgriScout_androidapp"><img src="./btn_agriscout.svg" /></a>
+  <a href="https://github.com/AmashaThenuwara/texyshield"><img src="https://raw.githubusercontent.com/AmashaThenuwara/AmashaThenuwara/main/btn_texyshield.svg" /></a> &nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/AmashaThenuwara/AgriScout_androidapp"><img src="https://raw.githubusercontent.com/AmashaThenuwara/AmashaThenuwara/main/btn_agriscout.svg" /></a>
   <br/><br/>
-  <a href="https://github.com/AmashaThenuwara/Clothing_brand_ecommerce_platform"><img src="./btn_clothing.svg" /></a> &nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/AmashaThenuwara/GUI-project"><img src="./btn_gui.svg" /></a>
+  <a href="https://github.com/AmashaThenuwara/Clothing_brand_ecommerce_platform"><img src="https://raw.githubusercontent.com/AmashaThenuwara/AmashaThenuwara/main/btn_clothing.svg" /></a> &nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/AmashaThenuwara/GUI-project"><img src="https://raw.githubusercontent.com/AmashaThenuwara/AmashaThenuwara/main/btn_gui.svg" /></a>
   <br/><br/>
-  <a href="https://github.com/AmashaThenuwara/EAD-project"><img src="./btn_ead.svg" /></a> &nbsp;&nbsp;&nbsp;
-  <a href="https://github.com/AmashaThenuwara/DM2-project"><img src="./btn_dm2.svg" /></a>
+  <a href="https://github.com/AmashaThenuwara/EAD-project"><img src="https://raw.githubusercontent.com/AmashaThenuwara/AmashaThenuwara/main/btn_ead.svg" /></a> &nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/AmashaThenuwara/DM2-project"><img src="https://raw.githubusercontent.com/AmashaThenuwara/AmashaThenuwara/main/btn_dm2.svg" /></a>
 
   <br/><br/>
   <img src="https://capsule-render.vercel.app/api?type=waving&color=9400d3&height=100&section=footer" width="100%" />
