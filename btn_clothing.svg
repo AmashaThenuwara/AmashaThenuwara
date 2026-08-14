@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="130" viewBox="0 0 420 130">
+  <defs>
+    <style>
+      .bg { fill: #0a0a0c; stroke: #9400d3; stroke-width: 2; rx: 12; animation: pulse 3s infinite alternate; }
+      @keyframes pulse {
+        from { filter: drop-shadow(0 0 2px #9400d3); }
+        to { filter: drop-shadow(0 0 8px #d896ff); }
+      }
+      .title { font-family: 'Segoe UI', Arial, sans-serif; font-size: 22px; font-weight: bold; fill: #ffffff; }
+      .desc { font-family: 'Segoe UI', Arial, sans-serif; font-size: 14px; fill: #b0b0b5; }
+      .btn { fill: #9400d3; rx: 6; animation: btnGlow 2s infinite alternate; }
+      @keyframes btnGlow {
+        from { fill: #7209b7; }
+        to { fill: #9400d3; }
+      }
+      .btn-text { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; font-weight: bold; fill: #ffffff; }
+      .icon { fill: #d896ff; }
+    </style>
+  </defs>
+  <rect x="10" y="10" width="400" height="110" class="bg" />
+  
+  <!-- Folder Icon -->
+  <svg x="20" y="25" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#d896ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+  </svg>
+
+  <text x="55" y="43" class="title">Clothing E-Commerce</text>
+  <text x="20" y="70" class="desc">A robust, responsive e-commerce</text>
+  <text x="20" y="92" class="desc">platform developed using PHP & MySQL.</text>
+  
+  <rect x="280" y="80" width="115" height="28" class="btn" />
+  <text x="337" y="99" class="btn-text" text-anchor="middle">View on GitHub</text>
+</svg>
