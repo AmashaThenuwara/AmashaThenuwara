@@ -16,12 +16,34 @@
 
 <br/>
 
-> 🔮 **Currently working on:** Exciting projects including **AgriScout**, a **Clothing Brand E-Commerce Platform**, and **Machine Learning** models.
-> ✨ **Learning & Exploring:** New technologies in modern **Software Engineering**.
-> 💬 **Ask me about:** Java, Kotlin, C#, PHP, PL/SQL.
-> 📫 **How to reach me:** **LinkedIn:** [Amasha Thenuwara](https://www.linkedin.com/in/amasha-thenuwara-487765407)
-
-<br/>
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="50%">
+        <h3 align="center">🔮 Current Focus</h3>
+        <p align="center">Developing <b>TexyShield</b>, <b>AgriScout</b>, and an enterprise <b>E-Commerce Platform</b> alongside <b>Machine Learning</b> models.</p>
+      </td>
+      <td align="center" width="50%">
+        <h3 align="center">✨ Learning & Exploring</h3>
+        <p align="center">Advanced concepts in modern <b>Software Engineering</b>, <b>AI Integration</b>, and <b>Industry 4.0</b> innovations.</p>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <h3 align="center">💬 Ask Me About</h3>
+        <p align="center">Java, Kotlin, C#, PHP, PL/SQL, Android Development, & Full-Stack Web Development.</p>
+      </td>
+      <td align="center">
+        <h3 align="center">📫 Let's Connect</h3>
+        <p align="center">
+          <a href="https://www.linkedin.com/in/amasha-thenuwara-487765407">
+            <img src="https://img.shields.io/badge/LinkedIn-%239400d3.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+          </a>
+        </p>
+      </td>
+    </tr>
+  </table>
+</div><br/>
 
 <h3 align="left">🟣 Languages and Tools:</h3>
 <p align="left">
@@ -36,31 +58,28 @@
 
 <br/>
 
-### 🌌 GitHub Stats
-<p align="center">
-  <a href="https://github.com/AmashaThenuwara">
-    <!-- Dark background (000000), neon purple titles/icons (9400d3), white text (ffffff) -->
-    <img src="https://github-readme-stats.vercel.app/api?username=AmashaThenuwara&show_icons=true&bg_color=000000&title_color=9400d3&text_color=ffffff&icon_color=9400d3&border_color=9400d3" alt="Amasha's GitHub Stats" />
-  </a>
-  <a href="https://github.com/AmashaThenuwara">
-    <img src="https://github-readme-streak-stats.herokuapp.com/?user=AmashaThenuwara&background=000000&ring=9400d3&fire=9400d3&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=9400d3&sideLabels=9400d3&dates=ffffff&border=9400d3" alt="Amasha's GitHub Streak" />
-  </a>
-</p>
-<p align="center">
-  <a href="https://github.com/AmashaThenuwara">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AmashaThenuwara&layout=compact&bg_color=000000&title_color=9400d3&text_color=ffffff&border_color=9400d3" alt="Top Languages" />
-  </a>
-</p>
+
 
 <br/>
 
 ### 👾 Featured Projects
-* 🛡️ **[TexyShield: Industry 4.0 Safety System](https://github.com/AmashaThenuwara/texyshield)** - AI-driven Smart Garment Factory Safety & Monitoring System.
-* 📱 **[AgriScout Android App](https://github.com/AmashaThenuwara/AgriScout_androidapp)** - An Android application built with Kotlin.
-* 🛒 **[Clothing Brand E-Commerce Platform](https://github.com/AmashaThenuwara/Clothing_brand_ecommerce_platform)** - A robust e-commerce platform developed using PHP.
-* 🖥️ **[GUI Project](https://github.com/AmashaThenuwara/GUI-project)** - Desktop application developed in C#.
-* ☕ **[EAD Project](https://github.com/AmashaThenuwara/EAD-project)** - Java-based enterprise application project.
-* 🗄️ **[DM2 & DWBI Projects](https://github.com/AmashaThenuwara/DM2-project)** - Data Mining, Warehousing, and Business Intelligence projects.
+
+<div align="center">
+  <table>
+    <tr>
+      <td><a href="https://github.com/AmashaThenuwara/texyshield"><img src="./btn_texyshield.svg" alt="TexyShield" /></a></td>
+      <td><a href="https://github.com/AmashaThenuwara/AgriScout_androidapp"><img src="./btn_agriscout.svg" alt="AgriScout" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/AmashaThenuwara/Clothing_brand_ecommerce_platform"><img src="./btn_clothing.svg" alt="Clothing Brand" /></a></td>
+      <td><a href="https://github.com/AmashaThenuwara/GUI-project"><img src="./btn_gui.svg" alt="GUI Project" /></a></td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/AmashaThenuwara/EAD-project"><img src="./btn_ead.svg" alt="EAD Project" /></a></td>
+      <td><a href="https://github.com/AmashaThenuwara/DM2-project"><img src="./btn_dm2.svg" alt="DM2 Project" /></a></td>
+    </tr>
+  </table>
+</div>
 
 <br/>
 
