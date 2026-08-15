@@ -1,6 +1,12 @@
-<h1 align="center">WELCOME</h1>
+<div align="center">
+  
+# WELCOME
 
-# Hi there, I'm Amasha! 👋
+## 🚀 [✨ CLICK HERE TO VIEW MY FULLY ANIMATED INTERACTIVE PORTFOLIO! ✨](https://AmashaThenuwara.github.io/AmashaThenuwara/) 🚀
+
+<br>
+
+### Hi there, I'm Amasha! 👋
 
 Welcome to my GitHub! I am a passionate Software Engineering student with a strong focus on building scalable, real-world solutions across mobile, web, IoT, and AI technologies. 
 
