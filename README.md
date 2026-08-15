@@ -2,7 +2,7 @@
   
 # WELCOME
 
-## 🚀 [✨ CLICK HERE TO VIEW MY FULLY ANIMATED INTERACTIVE PORTFOLIO! ✨](https://AmashaThenuwara.github.io/AmashaThenuwara/) 🚀
+## 🚀 [✨ CLICK HERE TO VIEW MY FULLY ANIMATED INTERACTIVE PORTFOLIO! ✨](https://AmashaThenuwara.github.io/AmashaThenuwara/portfolio_readme_ui.html) 🚀
 
 <br>
 
