@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amasha | Software Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --text-main: #ffffff;
+            --text-muted: #b0b0b0;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --glass-blur: blur(16px);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            /* Pure Dark Black Background */
+            background-color: #000000;
+        }
+
+        /* Twinkling Shiny White Stars */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            background: transparent;
+        }
+        
+        .star {
+            position: absolute;
+            background: #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #ffffff, 0 0 20px rgba(255, 255, 255, 0.8);
+            animation: twinkle linear infinite;
+        }
+
+        @keyframes twinkle {
+            0% { opacity: 0.1; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1.3); box-shadow: 0 0 15px #ffffff, 0 0 30px #ffffff; }
+            100% { opacity: 0.1; transform: scale(0.5); }
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 70px;
+            animation: fadeInDown 1.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        h1 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: clamp(6rem, 15vw, 12rem); /* Even more massive responsive size */
+            font-weight: 900;
+            margin-bottom: 0px;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            /* Shiny Silver/White Gradient */
+            background: linear-gradient(270deg, #ffffff, #666666, #ffffff, #cccccc);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.4));
+            animation: textShine 4s ease infinite, float 6s ease-in-out infinite;
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            display: inline-block;
+            position: relative;
+        }
+
+        .welcome-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .cute-stitch-welcome {
+            position: absolute;
+            top: -40%;
+            right: -15%;
+            width: 150px;
+            height: 150px;
+            background-image: url('cute_stitch_3.png'); /* Stitch with Love */
+            background-size: contain;
+            background-repeat: no-repeat;
+            pointer-events: none;
+            animation: floatStitch 4s ease-in-out infinite;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+        }
+
+        @keyframes floatStitch {
+            0% { transform: translateY(0) rotate(5deg); }
+            50% { transform: translateY(-10px) rotate(-5deg); }
+            100% { transform: translateY(0) rotate(5deg); }
+        }
+
+        h1:hover {
+            transform: scale(1.1) rotate(-2deg);
+            filter: drop-shadow(0 0 50px rgba(255, 255, 255, 1));
+        }
+
+        @keyframes textShine {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            font-weight: 300;
+            margin-top: 0;
+        }
+
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin: 35px 0;
+        }
+
+        .badges img {
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+        }
+
+        .badges img:hover {
+            transform: translateY(-8px) scale(1.1) rotate(3deg);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+        }
+
+        section {
+            margin-bottom: 60px;
+            animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+        }
+
+        h2 {
+            font-family: 'Quicksand', sans-serif;
+            font-size: 2.2rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 15px;
+            margin-bottom: 35px;
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Glassmorphism Cards */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        /* Card Shine Effect */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.08) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(45deg) translateY(-100%);
+            transition: all 0.6s ease;
+            pointer-events: none;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 15px 35px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.05);
+        }
+
+        .card:hover::before {
+            transform: rotate(45deg) translateY(100%);
+        }
+
+        .card h3 {
+            margin: 0 0 12px 0;
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+
+        .tech-stack {
+            font-size: 0.85rem;
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 8px 12px;
+            border-radius: 8px;
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .tech-stack {
+            font-size: 0.85rem;
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 8px 12px;
+            border-radius: 8px;
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Floating Stitch Animations */
+        .stitch-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .stitch-1 {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background-image: url('cute_stitch_1.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.6;
+            animation: bounceAcross 18s ease-in-out infinite alternate;
+        }
+
+        .stitch-2 {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-image: url('cute_stitch_2.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.7;
+            animation: swimAcross 25s linear infinite;
+        }
+
+        .stitch-3 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-image: url('cute_stitch_3.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.9;
+            animation: floatLove 35s ease-in-out infinite alternate;
+        }
+
+        .stitch-4 {
+            position: absolute;
+            width: 220px;
+            height: 220px;
+            background-image: url('cute_stitch_4.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.8;
+            animation: slideAcross 20s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+        }
+
+        /* Dynamic Cartoon Classes */
+        .cartoon {
+            position: absolute;
+            background-size: contain;
+            background-repeat: no-repeat;
+            opacity: 0.7;
+            pointer-events: none;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+        }
+
+        .anim-1 { animation: bounceAcross 25s ease-in-out infinite alternate; }
+        .anim-2 { animation: swimAcross 30s linear infinite; }
+        .anim-3 { animation: floatLove 40s ease-in-out infinite alternate; }
+        .anim-4 { animation: slideAcross 25s cubic-bezier(0.4, 0, 0.2, 1) infinite; }
+        .anim-5 { animation: floatUp 35s linear infinite; }
+
+        @keyframes bounceAcross {
+            0% { transform: translate(-30vw, 80vh) rotate(-10deg); }
+            50% { transform: translate(50vw, 20vh) rotate(15deg); }
+            100% { transform: translate(110vw, 70vh) rotate(-5deg); }
+        }
+
+        @keyframes swimAcross {
+            0% { transform: translate(120vw, 50vh) rotate(10deg); }
+            25% { transform: translate(75vw, 30vh) rotate(-10deg); }
+            50% { transform: translate(30vw, 60vh) rotate(5deg); }
+            75% { transform: translate(-10vw, 20vh) rotate(-15deg); }
+            100% { transform: translate(-30vw, 50vh) rotate(10deg); }
+        }
+
+        @keyframes floatLove {
+            0% { transform: translate(50vw, -20vh) rotate(0deg); }
+            50% { transform: translate(20vw, 60vh) rotate(-15deg); }
+            100% { transform: translate(80vw, 120vh) rotate(10deg); }
+        }
+
+        @keyframes slideAcross {
+            0% { transform: translate(-20vw, 10vh) scale(0.8) rotate(0deg); }
+            50% { transform: translate(50vw, 90vh) scale(1.2) rotate(360deg); }
+            100% { transform: translate(120vw, 10vh) scale(0.8) rotate(720deg); }
+        }
+
+        @keyframes floatUp {
+            0% { transform: translate(10vw, 120vh) rotate(-20deg); }
+            50% { transform: translate(60vw, 50vh) rotate(15deg); }
+            100% { transform: translate(90vw, -20vh) rotate(30deg); }
+        }
+
+        /* Interactive White Button */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            border: 2px solid #ffffff;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-align: center;
+            transition: all 0.4s ease;
+            align-self: flex-start;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+            z-index: 1;
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: #ffffff;
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 100px;
+            padding-top: 40px;
+            border-top: 1px solid var(--card-border);
+            color: var(--text-muted);
+        }
+
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            transition: text-shadow 0.3s ease;
+        }
+
+        .footer a:hover {
+            text-shadow: 0 0 10px #ffffff;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            h2 { font-size: 1.8rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="stitch-container">
+        <div class="stitch-1"></div>
+        <div class="stitch-2"></div>
+        <div class="stitch-3"></div>
+        <div class="stitch-4"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="welcome-container">
+                <h1>WELCOME</h1>
+            </div>
+            <p class="subtitle" style="margin-top: 20px;">Hi there, I'm Amasha! 👋<br>Software Engineering Student | Mobile, Web, IoT & AI</p>
+            
+            <div class="badges">
+                <img src="https://img.shields.io/badge/Kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white" alt="Kotlin">
+                <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java">
+                <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+                <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+                <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C++">
+                <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#">
+                <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
+                <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
+                <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel">
+                <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase">
+                <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+                <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow">
+            </div>
+        </header>
+
+        <section style="animation-delay: 0.2s;">
+            <h2>📱 Mobile & Application Development</h2>
+            <div class="grid">
+                <div class="card">
+                    <div>
+                        <h3>AgriScout: Smart Agriculture System</h3>
+                        <p>A mobile application designed to assist farmers with crop health tracking and disease detection, utilizing an offline-first architecture for rural connectivity.</p>
+                        <div class="tech-stack">Kotlin • Firebase • Room</div>
+                    </div>
+                    <a href="https://github.com/AmashaKThenuwara/AgriScout_androidapp" target="_blank" class="btn">View Repository</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>PharmaCare: Pharmacy System</h3>
+                        <p>A robust Windows desktop application for pharmacies to manage drug inventory, process prescriptions, and handle patient billing securely.</p>
+                        <div class="tech-stack">C# • .NET • SQL Server</div>
+                    </div>
+                    <a href="https://github.com/AmashaKThenuwara/GUI-project" target="_blank" class="btn">View Repository</a>
+                </div>
+            </div>
+        </section>
+
+        <section style="animation-delay: 0.4s;">
+            <h2>🌐 Web & E-Commerce</h2>
+            <div class="grid">
+                <div class="card">
+                    <div>
+                        <h3>StyleAura: Clothing E-Commerce</h3>
+                        <p>A dedicated online retail web application featuring dynamic catalogs, secure authentication, and an admin dashboard.</p>
+                        <div class="tech-stack">PHP • Laravel • MySQL</div>
+                    </div>
+                    <a href="https://github.com/AmashaKThenuwara/Clothing_brand_ecommerce_platform" target="_blank" class="btn">View Repository</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>MediaConnect: Media Club Website</h3>
+                        <p>The official dynamic web platform for the NIBM Media Club to manage events, registrations, and media galleries.</p>
+                        <div class="tech-stack">HTML • CSS • JS • PHP</div>
+                    </div>
+                    <a href="https://github.com/AmashaKThenuwara/WEB-project" target="_blank" class="btn">View Repository</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>TwinTrek: Interactive Memory Game</h3>
+                        <p>A fun, responsive browser-based memory matching game utilizing modern CSS features and event-driven JavaScript logic.</p>
+                        <div class="tech-stack">JavaScript • HTML5 • CSS3</div>
+                    </div>
+                    <a href="https://github.com/AmashaKThenuwara/TwinTrek-flip-game" target="_blank" class="btn">View Repository</a>
+                </div>
+            </div>
+        </section>
+
+        <section style="animation-delay: 0.6s;">
+            <h2>🤖 Industry 4.0, IoT & Hardware</h2>
+            <div class="grid">
+                <div class="card">
+                    <div>
+                        <h3>TexyShield: Factory Safety System</h3>
+                        <p>A massive AI-driven safety ecosystem integrating IoT sensors, YOLOv8 computer vision for PPE detection, Blockchain attendance, and AR machine maintenance.</p>
+                        <div class="tech-stack">Kotlin • Python • YOLO • ESP32 • AR</div>
+                    </div>
+                    <a href="https://github.com/AmashaKThenuwara/texyshield" target="_blank" class="btn">View Repository</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>SmartLink: IoT Environment Monitor</h3>
+                        <p>A hardware-to-cloud IoT system utilizing MQTT to monitor physical environments in real-time and trigger automated responses.</p>
+                        <div class="tech-stack">C/C++ • Python • Microcontrollers</div>
+                    </div>
+                    <a href="https://github.com/AmashaKThenuwara/IoT-project" target="_blank" class="btn">View Repository</a>
+                </div>
+            </div>
+        </section>
+
+        <section style="animation-delay: 0.8s;">
+            <h2>📊 Data Science & Analytics</h2>
+            <div class="grid">
+                <div class="card">
+                    <div>
+                        <h3>SafeDrive: Accident Prediction App</h3>
+                        <p>Machine learning models predicting road accident severity and likelihood based on historical crash data and environmental factors.</p>
+                        <div class="tech-stack">Python • Scikit-Learn • TensorFlow</div>
+                    </div>
+                    <a href="https://github.com/AmashaKThenuwara/ML-project" target="_blank" class="btn">View Repository</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>InsightWare: Data Warehousing & BI</h3>
+                        <p>An automated ETL and Data Warehousing solution utilizing Star/Snowflake schemas to fuel interactive BI dashboards.</p>
+                        <div class="tech-stack">SQL • PowerBI/Tableau</div>
+                    </div>
+                    <a href="https://github.com/AmashaKThenuwara/DWBI-project" target="_blank" class="btn">View Repository</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>StatSense: Statistical Analysis</h3>
+                        <p>Mathematical modeling and rigorous hypothesis testing (ANOVA, T-tests, Chi-square) applied to complex datasets.</p>
+                        <div class="tech-stack">R • Python • Pandas</div>
+                    </div>
+                    <a href="https://github.com/AmashaKThenuwara/Statistics-project" target="_blank" class="btn">View Repository</a>
+                </div>
+            </div>
+        </section>
+
+        <section style="animation-delay: 1.0s;">
+            <h2>⚙️ Enterprise & Algorithms</h2>
+            <div class="grid">
+                <div class="card">
+                    <div>
+                        <h3>StockFlow: Inventory Management</h3>
+                        <p>An enterprise-level system tracking stock levels, suppliers, and automating order workflows with strict RBAC.</p>
+                        <div class="tech-stack">Java • Spring/Java EE • MySQL</div>
+                    </div>
+                    <a href="https://github.com/AmashaKThenuwara/EAD-project" target="_blank" class="btn">View Repository</a>
+                </div>
+                <div class="card">
+                    <div>
+                        <h3>AlgoSolve: DSA Implementation</h3>
+                        <p>A deep-dive repository featuring custom implementations of complex data structures and optimized algorithms.</p>
+                        <div class="tech-stack">JS • Java • C++</div>
+                    </div>
+                    <a href="https://github.com/AmashaKThenuwara/PDSA-project" target="_blank" class="btn">View Repository</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer">
+            <h3>📫 Let's Connect!</h3>
+            <p>
+                <a href="https://www.linkedin.com/in/amasha-thenuwara-487765407" target="_blank">LinkedIn Profile</a>
+            </p>
+            <p style="font-size: 0.8rem; margin-top: 30px;">Generated dynamically with the custom Social Preview graphics featured across my repositories.</p>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.stitch-container');
+            const numCartoons = 18;
+            const animations = ['anim-1', 'anim-2', 'anim-3', 'anim-4', 'anim-5'];
+            
+            for (let i = 1; i <= numCartoons; i++) {
+                // Skip the specific characters the user requested to remove
+                if (i === 6 || i === 8) continue;
+                
+                const cartoon = document.createElement('div');
+                cartoon.classList.add('cartoon');
+                
+                // Randomly assign one of the 5 animations
+                const randomAnim = animations[Math.floor(Math.random() * animations.length)];
+                cartoon.classList.add(randomAnim);
+                
+                // Random size between 100px and 200px
+                const size = Math.floor(Math.random() * 100) + 100;
+                cartoon.style.width = `${size}px`;
+                cartoon.style.height = `${size}px`;
+                
+                // Load the image
+                cartoon.style.backgroundImage = `url('cartoon_${i}.png')`;
+                
+                // Randomize animation delay and duration to create chaos
+                const delay = Math.random() * -40; // Negative delay so they start immediately at different points
+                const duration = Math.random() * 20 + 20; // 20s to 40s
+                cartoon.style.animationDelay = `${delay}s`;
+                cartoon.style.animationDuration = `${duration}s`;
+                
+                // Random opacity
+                cartoon.style.opacity = (Math.random() * 0.4 + 0.5).toFixed(2);
+                
+                container.appendChild(cartoon);
+            }
+        });
+    </script>
+</body>
+</html>
